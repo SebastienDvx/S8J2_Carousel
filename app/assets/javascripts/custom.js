@@ -19,7 +19,7 @@ function switchTab(evt, cityName) {
     evt.currentTarget.className += " active";
 }
 
-
+//SLIDE SHOW
 
    $(function(){
       setInterval(function(){
@@ -33,22 +33,23 @@ function switchTab(evt, cityName) {
      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
      crossorigin="anonymous">
 
-   $(document).ready(function () {
-       //rotation speed and timer
-       var speed = 3000;
+//CAROUSEL
+ $(document).ready(function () {
+     //rotation speed and timer
+     var speed = 3000;
 
-       var run = setInterval(rotate, speed);
-       var slides = $('.slide');
-       var container = $('#slides ul');
-       var elm = container.find(':first-child').prop("tagName");
-       var item_width = container.width();
-       var previous = 'prev'; //id of previous button
-       var next = 'next'; //id of next button
-       slides.width(item_width); //set the slides to the correct pixel width
-       container.parent().width(item_width);
-       container.width(slides.length * item_width); //set the slides container to the correct total width
-       container.find(elm + ':first').before(container.find(elm + ':last'));
-       resetSlides();
+     var run = setInterval(rotate, speed);
+     var slides = $('.slide');
+     var container = $('#slides ul');
+     var elm = container.find(':first-child').prop("tagName");
+     var item_width = container.width();
+     var previous = 'prev'; //id of previous button
+     var next = 'next'; //id of next button
+     slides.width(item_width); //set the slides to the correct pixel width
+     container.parent().width(item_width);
+     container.width(slides.length * item_width); //set the slides container to the correct total width
+     container.find(elm + ':first').before(container.find(elm + ':last'));
+     resetSlides();
 
 
 //if user clicked on prev button
